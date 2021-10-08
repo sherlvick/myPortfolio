@@ -1,0 +1,91 @@
+/* Hero top section css */
+.HeroSection{
+    background: url("../../assets/Images/home-banner.svg") no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    height: 100vh;
+    margin: 0 15vmin;
+}
+/* ------------------------------- */
+.Grid{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.Border{
+    border: 1px solid black;
+}
+
+
+/* .Relative_Image{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 433px;
+    height: 577px;
+    object-fit: contain;
+} */
+
+.Width_100{
+    width: 100%;
+}
+
+.Text_Center{
+    text-align: center;
+}
+
+.Bg_Black{
+    background-color: #313D3F;
+}
+
+.Bg_Yellow{
+    /* background-color: #FFDC00; */
+    background-color: #EFC01A;
+}
+
+.TextColor_White{
+    color: white;
+}
+
+.FontSize_20{
+    font-size: calc(20px + 2vmin);
+}
+
+.Cursor_Pointer{
+    cursor: pointer;
+}
+
+/* Profile navigation card css and hover effects */
+.ProfileNavigatorCard{
+    margin: auto;
+}
+
+.ProfileNavigatorCard:hover{
+    background: rgb(255, 255, 255);
+    color: black;
+    font-size: calc(50px + 2vmin);
+    transition: all 280ms ease-in;
+}
+
+.ProfileNavigatorCard:not(:hover) { 
+    transition: all .5s ease-out;
+ }
+
+.Padd_250_0{
+    padding: 250px 0;
+}
+/* ------------------------------------------------ */
+
+/* Typewriter section css */
+.TypewriterSection{
+    margin: 200px 0;
+    font-size: calc(50px + 2vmin);
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.TypewriterSection div{
+    flex-basis: 50%;
+    text-align: center;
+}
+/* ----------------------------------------------------- */

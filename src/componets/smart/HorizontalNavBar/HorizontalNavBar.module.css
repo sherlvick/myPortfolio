@@ -1,0 +1,79 @@
+.NavBarContainer{
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  padding: 1vmin;
+}
+
+.NavBarEffect{
+  box-shadow: 0 4px 18px -4px rgb(0 0 0 / 25%);
+  background: #fff;
+}
+
+/* React logo css */
+.Logo {
+  height: 8vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .Logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* ------------------------------- */
+
+
+/* Menu button css */
+a {
+  color: black;
+  /* line-height: 1.4; */
+  padding: .25em;
+  text-decoration: none;
+}
+
+.MenuButton {
+  cursor: pointer;
+  font-size:16px;
+  font-weight: 400;
+  line-height: 32px;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  margin-right: 5vmin;
+}
+
+.MenuButton:hover,
+.MenuButton:active {
+letter-spacing: 5px;
+border-top: 1px solid black;
+border-bottom: 1px solid black;
+transition: all 280ms ease-in;
+}
+
+.MenuButton:not(:hover),
+.MenuButton:not(:active) {
+transition: all 280ms ease-out;
+}
+
+
+.MenuButtonContainer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* ------------------------------------ */
