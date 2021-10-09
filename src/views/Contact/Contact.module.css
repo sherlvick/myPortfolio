@@ -1,0 +1,92 @@
+.PageContainer{
+    margin: 25vmin 30vmin;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.ContactFormWrapper{
+    flex: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 0 10vmin;
+}
+
+.FormHeader{
+    margin: 0;
+    color: #313D3F;
+}
+
+.MutedText{
+    color: rgba(49,61,63,0.6);
+    margin-bottom: 5vmin;
+}
+
+.FormGroup{
+    display: flex;
+    flex-flow: column nowrap;
+    margin-bottom: 2vmin;
+}
+
+.Label{
+    color: rgba(49,61,63,0.6);
+}
+
+.FormInput{
+    outline: none;
+    border: none;
+    background: rgba(49,61,63,0.1);
+    border-radius: 10px;
+    padding: 1vh 1vw;
+}
+
+/* Send message button css */
+.SendMsgBtn {
+    background-color: #313D3F;
+    color: white;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    transition: font-size 1s;
+    cursor: pointer;
+    border: none;
+    /* box-sizing: content-box; */
+  }
+
+.SendMsgBtn:hover{
+    font-size: 16px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    animation-name: example;
+    animation-duration: .2s;
+    animation-fill-mode: forwards;
+}
+  
+  @keyframes example {
+    from {background-color: #313D3F;}
+    to {background-color: #EFC01A; color: black;}
+  }
+/* -------------------- */
+
+.ContactDetailWrapper{
+    flex: 1;
+    
+}
+
+.ContactImg{
+    object-fit: contain;
+    margin-bottom: 3vmin;
+}
+
+.ContactInfo{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+}
+
+.ContactInfo a{
+    color: rgba(49,61,63,0.6);
+}
+
+.ContactInfo a:hover{
+    color: rgba(49,61,63,1);
+    text-decoration: underline;
+}
