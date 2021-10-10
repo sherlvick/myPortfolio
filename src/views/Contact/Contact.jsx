@@ -19,7 +19,7 @@ const Contact = () => {
         event.preventDefault();
         console.log(inputs);
     }
-    // https://goo.gl/maps/sQ1B1CdFRLUfSZ856
+    
     return (
         <div className={classes.PageContainer}>
             <div className={classes.ContactFormWrapper}>
@@ -62,7 +62,7 @@ const Contact = () => {
             <div className={classes.ContactDetailWrapper}>
                 <img className={classes.ContactImg} src={contactBanner} width="256px" height="256px" alt="contact" />
                 <div className={classes.ContactInfo}>
-                    <Map /><a href="http://localhost:3000/" target="_blank" rel="noopener" >Paramount Raghavendra, Victorian Meadows Rd, Silver Springs Layout, Munnekollal, Bengaluru, Karnataka 560037</a>
+                    <Map /><a href="https://goo.gl/maps/sQ1B1CdFRLUfSZ856" target="_blank" rel="noopener" >Paramount Raghavendra, Victorian Meadows Rd, Silver Springs Layout, Munnekollal, Bengaluru, Karnataka 560037</a>
                 </div>
                 <div className={classes.ContactInfo}>
                     <Phone /><a href="tel:+91 9739746003" >+91 9739746003</a>

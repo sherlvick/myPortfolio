@@ -1,6 +1,6 @@
 import './App.css';
 
-import React, { Suspense, lazy } from 'react';
+// import React, { Suspense, lazy } from 'react';
 
 import { Route, Switch } from 'react-router-dom';
 

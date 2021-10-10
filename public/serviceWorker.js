@@ -3,13 +3,12 @@ let CACHE_NAME = 'my-portfolio-cache-v1';
 
 const urlsToCache = [
     '/static/js/bundle.js',
-    '/static/js/vendors~main.chunk.js',
-    '/static/js/main.chunk.js',
     '/manifest.json',
     '/favicon.ico',
     '/logo192.png',
     '/static/media/contact.5fc379cb.png',
     '/static/media/CalibreRegular.84b1f95c.otf',
+    '/static/media/home-banner.f793c366.svg',
     '/',
     '/contact',
 ];
