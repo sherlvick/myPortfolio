@@ -2,6 +2,8 @@
 let CACHE_NAME = 'my-portfolio-cache-v1';
 
 const urlsToCache = [
+    '/static/js/vendors~main.chunk.js',
+    '/static/js/main.chunk.js',
     '/static/js/bundle.js',
     '/manifest.json',
     '/favicon.ico',
@@ -27,12 +29,27 @@ self.addEventListener('install', function (event) {
 
 // We also want to inform service workers what to do with the cached files. This will be done with the fetch event.
 self.addEventListener('fetch', function (event) {
-    event.respondWith(caches.match(event.request)
-        .then(function (response) {
-            if (response) {
-                return response;
-            }
-            return fetch(event.request);
+    event.respondWith(
+        //Serving files from the cache- Network falling back to the cache
+        fetch(event.request).catch(function () {
+            return caches.match(event.request);
         })
+        // caches.match(event.request)
+        // .then(function (response) {
+        //     if (response) {
+        //         return response;
+        //     }
+        //     return fetch(event.request);
+        // })
     );
 });
+
+
+//Serving files from the cache- Cache falling back to the network
+// caches.match(event.request)
+//         .then(function (response) {
+//             if (response) {
+//                 return response;
+//             }
+//             return fetch(event.request);
+//         })
