@@ -83,10 +83,5 @@
 }
 
 .ContactInfo a{
-    color: rgba(49,61,63,0.6);
-}
-
-.ContactInfo a:hover{
-    color: rgba(49,61,63,1);
-    text-decoration: underline;
+    color: var(--color-link);
 }

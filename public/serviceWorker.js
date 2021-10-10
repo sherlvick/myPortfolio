@@ -1,9 +1,9 @@
 // In serviceWorker.js, we need to define a callback for the install event and choose what to cache. Inside the callback, we have to open a cache, cache the files, and get confirmation that assets are cached. serviceWorker.js 
 let CACHE_NAME = 'my-portfolio-cache-v1';
 
+// '/static/js/vendors~main.chunk.js',
+// '/static/js/main.chunk.js',
 const urlsToCache = [
-    '/static/js/vendors~main.chunk.js',
-    '/static/js/main.chunk.js',
     '/static/js/bundle.js',
     '/manifest.json',
     '/favicon.ico',
@@ -31,16 +31,16 @@ self.addEventListener('install', function (event) {
 self.addEventListener('fetch', function (event) {
     event.respondWith(
         //Serving files from the cache- Network falling back to the cache
-        fetch(event.request).catch(function () {
-            return caches.match(event.request);
-        })
-        // caches.match(event.request)
-        // .then(function (response) {
-        //     if (response) {
-        //         return response;
-        //     }
-        //     return fetch(event.request);
+        // fetch(event.request).catch(function () {
+        //     return caches.match(event.request);
         // })
+        caches.match(event.request)
+        .then(function (response) {
+            if (response) {
+                return response;
+            }
+            return fetch(event.request);
+        })
     );
 });
 
@@ -53,3 +53,17 @@ self.addEventListener('fetch', function (event) {
 //             }
 //             return fetch(event.request);
 //         })
+
+{/* <script>
+if ('serviceWorker' in navigator) {
+window.addEventListener('load', function() {
+navigator.serviceWorker.register('serviceWorker.js').then(function(registration) {
+// Registration was successful
+console.log('ServiceWorker registration successful with scope: ', registration.scope);
+}, function(err) {
+// registration failed :(
+console.log('ServiceWorker registration failed: ', err);
+});
+});
+}
+</script>  */}

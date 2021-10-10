@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -49,12 +54,13 @@ code {
 }
 
 :root {
-  --color-background: #f2f6fb;
+  --color-background: #ffffff;
 
-  --color-primary-patient: #fcb902;
+  --color-primary-black: #313D3F;
   --color-primary-doctor: #38b5ed;
   --color-primary-partner: #2fbfc0;
 
+  --color-link: #5FC1CE;
 
   /* --font--SemiBoldItalic: Montserrat-SemiBoldItalic, sans-serif, serif; */
   --font--SemiBold: Calibre-SemiBold, sans-serif, serif;

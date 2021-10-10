@@ -1,3 +1,7 @@
+.HamburgerIconContainer{
+  display: none;
+}
+
 .NavBarContainer{
   position: fixed;
   top: 0;
@@ -8,9 +12,6 @@
   align-items: flex-end;
   width: 100%;
   padding: 1vmin;
-}
-
-.NavBarEffect{
   box-shadow: 0 4px 18px -4px rgb(0 0 0 / 25%);
   background: #fff;
 }
@@ -77,3 +78,43 @@ transition: all 280ms ease-out;
     transform: translate(-50%, -50%);
 }
 /* ------------------------------------ */
+
+@media only screen and (max-width: 425px) {
+  .NavBarContainer {
+    display: none;
+  }
+
+  .HamburgerIconContainer{
+    display: inline-block;
+    cursor: pointer;
+    padding: 2vmin;
+  }
+
+  .MobileNavContainer{
+    border: 1px solid;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background-color: var(--color-background);
+    z-index: 1000;
+    width: 50%;
+    transform: translateX(-100%);
+    animation: slide-in 0.4s forwards;
+    -webkit-animation: slide-in 0.4s forwards;
+    animation-timing-function:ease-out;
+  }
+
+  @keyframes slide-in {
+    100% { transform: translateX(0%); }
+}
+
+@-webkit-keyframes slide-in {
+    100% { -webkit-transform: translateX(0%); }
+}
+
+
+  .MobileMenuButtonContainer{
+    display: flex;
+    flex-flow: column nowrap;
+  }
+}
