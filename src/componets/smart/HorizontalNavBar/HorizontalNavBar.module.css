@@ -117,22 +117,31 @@ transition: all 280ms ease-out;
     display: none;
   }
 
-  .UserSection{
-    /* border: 1px solid; */
-    display: flex;
-    justify-content: space-between;
-    border-radius: 20px;
-    padding: 1vmin;
-    background-color: var(--color-primary-black);
-    color: var(--color-background);
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-    /* font-size: 16px; */
-  }
-
   .MobileMenuButtonContainer{
     display: flex;
     flex-flow: column nowrap;
     margin-top: 10vmin;
+  }
+
+  .MobileMenuButton{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 2vmin 0;
+  }
+  /* To give effect when menus is active */
+  .MobileMenuButton:hover,
+  .MobileMenuButton:active{
+    border-right: 1vmin solid var(--color-primary-black);
+    background-color: 	var(--color-primary-yellow);
+  }
+
+  .MenuSelected{
+    border: 1px solid;
+  }
+
+  .MenuName{
+    padding-left: 3vmin;
   }
 }
 

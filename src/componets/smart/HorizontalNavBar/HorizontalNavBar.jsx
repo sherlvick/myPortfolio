@@ -5,10 +5,11 @@ import classes from "./HorizontalNavBar.module.css";
 
 // import icons
 import logo from "../../../assets/Images/logo192.png";
-import { Hamburger,ChevronDown,User } from "../../../ProjectIcons";
+import { Hamburger } from "../../../ProjectIcons";
 
 // import components
 import Backdrop from "../../dumb/Backdrop/Backdrop";
+import MenuUserDropdown from "../../dumb/MenuUserDropdown/MenuUserDropdown";
 
 const HorizontalNavBar = (props) => {
   const history = useHistory();
@@ -27,15 +28,15 @@ const HorizontalNavBar = (props) => {
 
   // Logic for generating menu button jsx and onClick handler
   const onClickOfMenu = (menuName) => {
-    history.push(props.menus[menuName])
+    history.push(props.menus[menuName].route)
   };
 
   let menuButtons = [];
   let key = 0;
   for (const btnName in props.menus) {
     key++;
-    menuButtons.push(<a className={`${MenuButtonClass}`} key={`${btnName}_${key}`} onClick={() => onClickOfMenu(btnName)}>{btnName}</a>)
-  }
+    menuButtons.push(<a className={MenuButtonClass} key={`${btnName}_${key}`} onClick={() => onClickOfMenu(btnName)}>{isMobileMenuVisible && props.menus[btnName].icon}<span className={classes.MenuName}>{btnName}</span></a>)
+  } 
   // -----------------------------
 
   const hideMobileMenu = () => {
@@ -46,11 +47,7 @@ const HorizontalNavBar = (props) => {
     <React.Fragment>
       <div className={navContainerClass}>
         <img className={classes.Logo} src={logo} alt="logo" />
-        {isMobileMenuVisible && <div className={classes.UserSection}>
-          <User/>
-          <span>Aman Kumar</span>
-          <ChevronDown />
-          </div>}
+        {isMobileMenuVisible && <MenuUserDropdown/>}
         <div className={menuButtonContainerClass}>
           {menuButtons}
         </div>

@@ -2,13 +2,15 @@ import { Fragment } from "react";
 
 import HorizontalNavBar from "../componets/smart/HorizontalNavBar/HorizontalNavBar";
 
+import { Home,Briefcase,FileText,Globe } from "../ProjectIcons";
+
 const Layout = (props) => {
   const getHorizontalNavMenuObj = () => {
     let menuObj = {};
-    menuObj["HOME"] = "/";
-    menuObj["WORK"] = "/work";
-    menuObj["RESUME"] = "/resume";
-    menuObj["CONTACT"] = "/contact";
+    menuObj["HOME"] = {"route":"/", "icon":<Home/>};
+    menuObj["WORK"] = {"route":"/work", "icon":<Briefcase/>};
+    menuObj["RESUME"] = {"route":"/resume", "icon":<FileText/>};
+    menuObj["CONTACT"] = {"route":"/contact", "icon":<Globe/>};
     return menuObj;
   };
 
