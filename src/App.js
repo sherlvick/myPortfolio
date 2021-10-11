@@ -11,6 +11,7 @@ import Layout from './hoc/Layout';
 // import views
 const HomePage = lazy(() => import('./views/HomePage/HomePage'));
 const ContactPage = lazy(() => import('./views/Contact/Contact'));
+const ResumePage = lazy(() => import('./views/Resume/Resume'));
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/contact" component={ContactPage} />
+          <Route path="/resume" component={ResumePage} />
         </Switch>
       </Suspense>
     </Layout>
