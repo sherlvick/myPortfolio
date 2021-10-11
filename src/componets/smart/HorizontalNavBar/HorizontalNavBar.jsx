@@ -29,6 +29,7 @@ const HorizontalNavBar = (props) => {
 
   // Logic for generating menu button jsx and onClick handler
   const onClickOfMenu = (menuName) => {
+    if(isMobileMenuVisible)hideMobileMenu();
     history.push(props.menus[menuName].route)
   };
 

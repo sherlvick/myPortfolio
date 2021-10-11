@@ -96,4 +96,8 @@
         padding: 0 10vmin;
         margin-bottom: 5vmin;
     }
+
+    .ContactFormWrapper{
+        margin-bottom: 5vmin;
+    }
 }
