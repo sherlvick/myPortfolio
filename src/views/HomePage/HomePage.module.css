@@ -7,6 +7,8 @@
     margin: 0 15vmin;
 }
 /* ------------------------------- */
+
+/* Profile navigation card css and hover effects */
 .TilesSection{
     display: grid;
     grid-template-columns: auto auto;
@@ -19,12 +21,9 @@
 }
 
 .Bg_Yellow{
-    /* background-color: #FFDC00; */
     background-color: #EFC01A;
 }
 
-
-/* Profile navigation card css and hover effects */
 .ProfileNavigatorCard{
     margin: auto;
     padding: 250px 0;

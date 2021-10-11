@@ -49,7 +49,6 @@
     transition: font-size 1s;
     cursor: pointer;
     border: none;
-    /* box-sizing: content-box; */
   }
 
 .SendMsgBtn:hover{
@@ -68,7 +67,6 @@
 
 .ContactDetailWrapper{
     flex: 1;
-    
 }
 
 .ContactImg{
@@ -84,4 +82,18 @@
 
 .ContactInfo a{
     color: var(--color-link);
+}
+
+
+@media only screen and (max-width: 425px){
+    .PageContainer{
+        margin: 0;
+        display: flex;
+        flex-flow: column-reverse nowrap;
+    }
+    
+    .ContactDetailWrapper{
+        padding: 0 10vmin;
+        margin-bottom: 5vmin;
+    }
 }
