@@ -1,38 +1,57 @@
-.Container{
-    width: 60vmin;
-    padding: 10%;
+.Container {
+  width: 60vmin;
+  padding: 10%;
 }
 
-.Header{
-    display: flex;
+.Header {
+  display: flex;
 }
 
-.PaddRight10{
-    padding-right: 10px;
+.PaddRight10 {
+  padding-right: 10px;
 }
 
-.Para{
+.Para {
   margin-bottom: 2vmin;
 }
 
 .ViewResumeBtn {
-    background-color: #313D3F;
-    color: white;
-    border-radius: 20px;
-    padding: 10px 20px;
-    font-size: 14px;
-    transition: font-size 1s;
-  }
-
-.ViewResumeBtn:hover{
-    font-size: 16px;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-    animation-name: example;
-    animation-duration: .2s;
-    animation-fill-mode: forwards;
+  background-color: #313d3f;
+  color: white;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 14px;
+  transition: font-size 1s;
 }
-  
-  @keyframes example {
-    from {background-color: #313D3F;}
-    to {background-color: #EFC01A; color: black;}
+
+.ViewResumeBtn:hover {
+  font-size: 16px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  animation-name: example;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes example {
+  from {
+    background-color: #313d3f;
   }
+  to {
+    background-color: #efc01a;
+    color: black;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .Container{
+    width: 100%;
+    padding: 0;
+  }
+  .Header {
+    margin-bottom: 20px;
+  }
+  .Para {
+    margin-bottom: 20px;
+  }
+}
