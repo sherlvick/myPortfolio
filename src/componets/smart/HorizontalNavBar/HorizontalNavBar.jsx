@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory,useLocation } from "react-router-dom";
 
 import classes from "./HorizontalNavBar.module.css";
 
@@ -13,6 +13,7 @@ import MenuUserDropdown from "../../dumb/MenuUserDropdown/MenuUserDropdown";
 
 const HorizontalNavBar = (props) => {
   const history = useHistory();
+  const {pathname} = useLocation();
 
   const [isMobileMenuVisible, setIsMobileMenuVisible] = useState(false);
 
@@ -35,7 +36,11 @@ const HorizontalNavBar = (props) => {
   let key = 0;
   for (const btnName in props.menus) {
     key++;
-    menuButtons.push(<a className={MenuButtonClass} key={`${btnName}_${key}`} onClick={() => onClickOfMenu(btnName)}>{isMobileMenuVisible && props.menus[btnName].icon}<span className={classes.MenuName}>{btnName}</span></a>)
+    let menuSelectedClass = null;
+    if(pathname === props.menus[btnName].route){
+      menuSelectedClass = classes.MenuSelected;
+    }
+    menuButtons.push(<a className={`${MenuButtonClass} ${menuSelectedClass}`} key={`${btnName}_${key}`} onClick={() => onClickOfMenu(btnName)}>{isMobileMenuVisible && props.menus[btnName].icon}<span className={classes.MenuName}>{btnName}</span></a>)
   } 
   // -----------------------------
 

@@ -15,7 +15,6 @@
     padding: 2vmin;
     background-color: var(--color-primary-black);
     color: var(--color-background);
-    transition: all 0.2s ease-in-out;
 }
 
 .UserButton {
@@ -24,8 +23,11 @@
 }
 
 .DropdownContentWrapper {
-    box-sizing: border-box;
-  border-bottom: 1vmin solid var(--color-primary-black);
+  font-family: var(--font-Thin);
+  font-size: 14px;
+  box-sizing: border-box;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   position: absolute;
   width: 100%;
   left: 0;
@@ -36,7 +38,7 @@
   justify-content: space-around;
   padding: 0 2vmin;
   z-index: 1;
-  background-color: var(--color-secondary-black);
+  background-color: var(--color-primary-black);
   color: white;
   visibility: hidden;
   height: 0;

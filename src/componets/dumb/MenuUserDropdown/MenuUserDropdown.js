@@ -25,7 +25,8 @@ const MenuUserDropdown = () => {
         }
       };
 
-    let dropdownContent = <div className={classes.DropdownContentWrapper} ref={containerRef}><p>dasdasdjknj</p><p>dsfdf</p><p>ghjkhkjh</p></div>;
+      let today = new Date();
+    let dropdownContent = <div className={classes.DropdownContentWrapper} ref={containerRef}><p>Last updated at {today.getDate()+"/"+today.getMonth()+1+"/"+today.getFullYear()}</p><p>80% profile completed</p><p>Edit your site</p></div>;
     return (
         <div className={containerClass} onClick={() => { setIsVisible(true) }}>
             <div className={classes.UserButton}>

@@ -40,6 +40,20 @@ code {
 }
 
 @font-face {
+  font-family: Calibre-Light;
+  font-style: normal;
+  src: url("./fonts/CalibreLight.otf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Calibre-Thin;
+  font-style: normal;
+  src: url("./fonts/CalibreThin.otf");
+  font-display: swap;
+}
+
+@font-face {
   font-family: Calibre-SemiBold;
   font-style: normal;
   src: url("./fonts/CalibreSemibold.otf");
@@ -67,8 +81,9 @@ code {
   --font--SemiBold: Calibre-SemiBold, sans-serif, serif;
   --font--Regular: Calibre-Regular, sans-serif, serif;
   --font--Medium: Calibre-Medium, sans-serif, serif;
+  --font-Thin: Calibre-Thin, sans-serif, serif;
   /* --font--LightItalic: Montserrat-LightItalic, sans-serif, serif; */
-  /* --font--Light: Montserrat-Light, sans-serif, serif; */
+  --font--Light: Calibre-Light, sans-serif, serif;
   --font--Italic: Calibre-Italic, sans-serif, serif;
   /* --font--ExtraLight: Montserrat-ExtraLight, sans-serif, serif; */
   /* --font--ExtraBold: Montserrat-ExtraBold, sans-serif, serif; */

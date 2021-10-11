@@ -130,14 +130,15 @@ transition: all 280ms ease-out;
     margin: 2vmin 0;
   }
   /* To give effect when menus is active */
-  .MobileMenuButton:hover,
+  /* .MobileMenuButton:hover,
   .MobileMenuButton:active{
     border-right: 1vmin solid var(--color-primary-black);
     background-color: 	var(--color-primary-yellow);
-  }
+  } */
 
   .MenuSelected{
-    border: 1px solid;
+    border-right: 1vmin solid var(--color-primary-black);
+    background-color: 	var(--color-primary-yellow);
   }
 
   .MenuName{
