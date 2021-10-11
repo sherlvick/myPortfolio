@@ -12,10 +12,10 @@ const HomePage = () => {
             <div className={classes.HeroSection}>
             <HeroIntro />
             </div>
-        <div className={`${classes.Grid} ${classes.FontSize_20} ${classes.Cursor_Pointer}`}>
-            <div className={`${classes.ProfileNavigatorCard} ${classes.Padd_250_0} ${classes.Width_100} ${classes.Text_Center} ${classes.Bg_Yellow} ${classes.TextColor_White}`}>
+        <div className={classes.TilesSection}>
+            <div className={`${classes.ProfileNavigatorCard} ${classes.Bg_Yellow}`}>
             <Tooltip content="Enter to see my design skills" direction="bottom" delay={200}>DESIGN</Tooltip></div>
-            <div className={`${classes.ProfileNavigatorCard} ${classes.Padd_250_0} ${classes.Width_100} ${classes.Text_Center} ${classes.Bg_Black} ${classes.TextColor_White}`}>
+            <div className={`${classes.ProfileNavigatorCard} ${classes.Bg_Black}`}>
             <Tooltip content="Enter to see my coding skills" direction="bottom" delay={200}>CODE</Tooltip></div>
         </div>
         </React.Fragment>

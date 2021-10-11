@@ -7,31 +7,11 @@
     margin: 0 15vmin;
 }
 /* ------------------------------- */
-.Grid{
+.TilesSection{
     display: grid;
     grid-template-columns: auto auto;
-}
-
-.Border{
-    border: 1px solid black;
-}
-
-
-/* .Relative_Image{
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
-    width: 433px;
-    height: 577px;
-    object-fit: contain;
-} */
-
-.Width_100{
-    width: 100%;
-}
-
-.Text_Center{
-    text-align: center;
+    font-size: calc(20px + 2vmin);
+    cursor: pointer;
 }
 
 .Bg_Black{
@@ -43,21 +23,14 @@
     background-color: #EFC01A;
 }
 
-.TextColor_White{
-    color: white;
-}
-
-.FontSize_20{
-    font-size: calc(20px + 2vmin);
-}
-
-.Cursor_Pointer{
-    cursor: pointer;
-}
 
 /* Profile navigation card css and hover effects */
 .ProfileNavigatorCard{
     margin: auto;
+    padding: 250px 0;
+    width: 100%;
+    text-align: center;
+    color: white;
 }
 
 .ProfileNavigatorCard:hover{
@@ -71,9 +44,6 @@
     transition: all .5s ease-out;
  }
 
-.Padd_250_0{
-    padding: 250px 0;
-}
 /* ------------------------------------------------ */
 
 /* Typewriter section css */
@@ -93,6 +63,17 @@
 @media only screen and (max-width: 425px) {
     .HeroSection{
         height: 50vh;
+    }
+    .ProfileNavigatorCard{
+        margin: auto;
+        padding: 0;
+        height: 50vh;
+        width: 100%;
+        text-align: center;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
   }
   
