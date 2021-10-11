@@ -3,10 +3,11 @@ import { useHistory } from "react-router-dom";
 
 import classes from "./HorizontalNavBar.module.css";
 
+// import icons
 import logo from "../../../assets/Images/logo192.png";
+import { Hamburger,ChevronDown,User } from "../../../ProjectIcons";
 
-import { Hamburger } from "../../../ProjectIcons";
-
+// import components
 import Backdrop from "../../dumb/Backdrop/Backdrop";
 
 const HorizontalNavBar = (props) => {
@@ -45,6 +46,11 @@ const HorizontalNavBar = (props) => {
     <React.Fragment>
       <div className={navContainerClass}>
         <img className={classes.Logo} src={logo} alt="logo" />
+        {isMobileMenuVisible && <div className={classes.UserSection}>
+          <User/>
+          <span>Aman Kumar</span>
+          <ChevronDown />
+          </div>}
         <div className={menuButtonContainerClass}>
           {menuButtons}
         </div>

@@ -79,6 +79,7 @@ transition: all 280ms ease-out;
 }
 /* ------------------------------------ */
 
+/* media query for mobile screen navigation bar */
 @media only screen and (max-width: 425px) {
   .NavBarContainer {
     display: none;
@@ -91,11 +92,12 @@ transition: all 280ms ease-out;
   }
 
   .MobileNavContainer{
-    border: 1px solid;
     position: fixed;
     top: 0;
     bottom: 0;
     background-color: var(--color-background);
+    padding: 5vmin 2vmin;
+    box-sizing: border-box;
     z-index: 1000;
     width: 50%;
     transform: translateX(-100%);
@@ -111,10 +113,27 @@ transition: all 280ms ease-out;
 @-webkit-keyframes slide-in {
     100% { -webkit-transform: translateX(0%); }
 }
+  .Logo {
+    display: none;
+  }
 
+  .UserSection{
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+    padding: 1vmin;
+    background-color: var(--color-primary-black);
+    color: var(--color-background);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    /* font-size: 16px; */
+  }
 
   .MobileMenuButtonContainer{
     display: flex;
     flex-flow: column nowrap;
+    margin-top: 10vmin;
   }
 }
+
+/* --------------------------------------------------- */
