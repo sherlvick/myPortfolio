@@ -12,6 +12,7 @@ import Layout from './hoc/Layout';
 const HomePage = lazy(() => import('./views/HomePage/HomePage'));
 const ContactPage = lazy(() => import('./views/Contact/Contact'));
 const ResumePage = lazy(() => import('./views/Resume/Resume'));
+const Error404Page = lazy(() => import('./views/Error404/Error404'));
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route exact path="/" component={HomePage} />
           <Route path="/contact" component={ContactPage} />
           <Route path="/resume" component={ResumePage} />
+          <Route path="*" component={Error404Page} />
         </Switch>
       </Suspense>
     </Layout>
